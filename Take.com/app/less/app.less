@@ -1,0 +1,341 @@
+@import "variables.less";
+@import url('https://fonts.googleapis.com/css?family=Exo:200,400,700,800,900');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+}
+
+/*----- Header -----*/
+#header{
+	width: 100%;
+	margin: 0;
+	padding: 220px 0;
+	text-align: center;
+	background-image: url(../assets/img/header_img.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	h1{
+		font-size: 56px;
+		font-weight: 200;
+	}
+	/*----- Parallax -----*/
+	#scene{
+		position: relative;
+		width: 100%;
+		height: 800px;
+		img{
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}		
+	}
+	/*----- Button_Play -----*/
+	#play{
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		margin: 40px 0;
+		border-radius: 50%;
+		border: none;
+		background-color: @play_btn;
+		color: @white;
+		position: relative;
+		outline: none;
+		&::before{
+			position: absolute;
+			content: '';
+			width: 60px;
+			height: 60px;
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+			background-color: fade(@white, 30%);
+		}
+		i{
+			position: absolute;
+			top: 19px;
+			left: 24px;
+			font-size: 22px;
+		}
+	}
+
+	/*----- Button_Try -----*/
+	.btn_try{
+		width: 190px;
+		height: 50px;
+		border: none;
+		border-radius: 3px;
+		background-color: @btn_try;
+		color: @white;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+}
+
+/*----- Section Info -----*/
+#section_info{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	&::before{
+		position: absolute;
+		content: '';
+		right: 0;
+		top: 187px;
+		width: 0;
+		height: 0;
+		border-bottom: 420px solid @btn_try; 
+		border-left: 500px solid transparent;
+	}
+	&::after{
+		position: absolute;
+		content: '';
+		right: 0;
+		top: 0;
+		width: 500px;
+		height: 606px;
+		background-color: fade(#999999, 10%);
+	}
+	.left_info{
+		margin: 150px 0;
+		h2{
+			font-size: 40px;
+		}
+	}
+}
+
+/*----- Section Features -----*/
+#section_features{
+	margin: 0;
+	padding: 80px 0 100px 0;
+	text-align: center;
+	background-image: url(../assets/img/BG.png);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	.block_inform{
+		margin-top: 50px;
+		img{
+			margin-bottom: 25px;
+		}
+		h3{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/*----- Section Responsive -----*/
+#section_responsive{
+	position: relative;
+	overflow: hidden;
+	padding: 90px 0;
+	&::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: -69px;
+		width: 0;
+		height: 0;
+		border-bottom: 600px solid @btn_try; 
+		border-right: 600px solid transparent;
+	}
+	.left_responsiv{
+		position: relative;
+		img{
+			width: 603px;
+		}
+	}
+	.right_resposive{
+		margin: 50px 0 50px 0px;
+	}	
+}
+
+/*----- Section Sponsors -----*/
+#section_sponsor{
+	background-image: url(../assets/img/BG_sponsor.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding: 100px 0 50px 0;
+	text-align: center;
+	.sponsor_img{
+		width: 60px;
+		height: 60px;
+		margin: 25px 0;
+		background-color: @img_sponsor;
+	}
+	.text_commit{
+		color: @white;
+	}
+	.name_sponsor{
+		padding: 5px 0 20px 0;
+	}
+	ul{
+		li{
+			display: inline-block;
+			text-decoration: none;
+			margin: 25px;
+		}
+	}
+}
+
+/*----- Section Feateres -----*/
+#section_features_two{
+	padding: 100px 0 0 0;
+	text-align: center;
+	overflow: hidden;
+	.text_features_two{
+		margin: 30px 0 80px 0;
+		padding: 0 50px;
+	}
+	img{
+		border-radius: 10px 10px 0 0; 
+		box-shadow: 0 2px 15px 0.5px #999;
+	}
+}
+
+/*----- Section Form of dispatch -----*/
+#form_of_dispatch{
+	background-color: @form_of_dispatch;
+	text-align: center;
+	padding: 100px 0;
+	h2{
+		color: @white;
+	}
+	.form{
+		margin: 40px 0 15px 0; 
+		input{
+			width: 250px;
+			margin: 10px;
+			padding: 10px 15px;
+			color: @white;
+			outline: none;
+			border: none;
+			box-shadow: 0 0 2px @white;
+			border-radius: 3px;
+			background-color: fade(@white, 10%);
+			&::-webkit-input-placeholder { color: @white; opacity: 0.8;}
+			
+			transition: 0.3s;
+			&:focus{
+				box-shadow: 0 0 0 #000;
+			}
+		}
+		.btn_form{
+			position: relative;
+			width: 250px;
+			padding: 12px 0;
+			outline: none;
+			text-transform: uppercase;
+			background-color: @btn_form;
+			border: none;
+			color: @white;
+			border-radius: 3px;
+			transition: 0.4s;
+			&::after{
+				position: absolute;
+				content: '30 days free trial for all.';
+				top: -50px;
+				right: 0;
+				left: 0;
+				text-transform: none;
+				font-size: 14px;
+				font-weight: 200;
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				top: -43px;
+				left: 15px;
+				width: 25px;
+				height: 35px;
+				background-image: url(../assets/img/ARROW.png);
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	.link_for_terms{
+		letter-spacing: 1px;
+		color: @white;
+		font-weight: 200;
+		a{
+			color: @white;
+			text-decoration: underline;
+			font-weight: 400;
+		}
+	}
+}
+
+/*----- Footer -----*/
+#footer{
+	position: relative;
+	margin: 0 auto;
+	padding: 70px 0;
+	li{
+		text-decoration: none;
+		list-style: none;
+		img, h4{
+			margin-bottom: 15px;
+		}
+		h4{
+			padding: 10px 0 15px 0;
+			font-weight: 600;
+			font-size: 20px;
+			letter-spacing: 1px;
+		}
+	}
+	&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		border-top: 300px solid @btn_form; 
+		border-left: 250px solid transparent;
+	}
+	.about_us, .support, .get_news{
+		li{
+			margin-bottom: 5px;
+			a{
+				display: block;
+				text-decoration: none;
+				color: #000;
+			}
+		}
+	}
+	.subscription{
+		position: relative;
+		width: 250px;
+    padding: 10px 20px;  
+    border-radius: 3px;
+    border: 1px solid #999; 
+    box-shadow: 0 1px 3px #000;
+    outline: none;
+	}
+	.btn_send{
+		position: absolute;	
+		width: 44px;
+		height: 44px;
+		box-shadow: 0 1px 3px #000;		
+		background-color: @btn_send;
+		border: 1px solid @btn_send;
+		color: @white;
+		font-size: 18px;
+	}
+	.social_links{
+		padding: 15px 50px;
+		li{
+			display: inline-block;
+			margin: 0 15px;	
+			a{
+				color: #999;
+			}
+		}
+	}
+}
+
+@import "media.less";
